@@ -48,16 +48,19 @@ python3 manage.py runserver
 ````
 
 ## API Endpoints
-- Authentication
+# Authentication
 
-Register: `POST /api/users/`
-Get Token: `POST /api/auth/token/`
+- Register: `POST /api/users/`
+- Get Token/Login: `POST /api/auth/token/`
 
-- Tasks
+# Tasks
 
-List/Create Tasks: `GET/POST /api/tasks/`
-Retrieve/Update/Delete Task: `GET/PUT/DELETE /api/tasks/{id}/`
-Filter Tasks by Status: `GET /api/tasks/by_status/?status={status}`
+- List Tasks: `GET /api/tasks/`
+- Create Task: `POST /api/tasks/`
+- Retrieve Task: `GET /api/tasks/{id}/`
+- Update Task: `PUT /api/tasks/{id}/`
+- Delete Task: `DELETE /api/tasks/{id}/`
+- Filter Tasks by Status: `GET /api/tasks/by_status/?status={status}`
 
 <!-- API Usage Examples -->
 
@@ -92,20 +95,21 @@ task-manager/
 │   ├── serializers.py
 │   ├── urls.py
 │   └── views.py
-├── django_task_management_system/
-│   ├── __init__.py
-│   ├── asgi.py
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
 └── templates/
-    └── base/
-        ├── base.html
-        ├── login.html
-        ├── register.html
-        ├── task_create.html
-        ├── task_delete.html
-        ├── task_detail.html
-        ├── task_list.html
-        └── task_update.html
+│   └── base/
+│       ├── base.html
+│       ├── login.html
+│       ├── register.html
+│       ├── task_create.html
+│       ├── task_delete.html
+│       ├── task_detail.html
+│       ├── task_list.html
+│       └── task_update.html
+└── django_task_management_system/
+    ├── __init__.py
+    ├── asgi.py
+    ├── settings.py
+    ├── urls.py
+    └── wsgi.py
+
 ```
