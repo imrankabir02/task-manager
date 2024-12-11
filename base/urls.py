@@ -19,6 +19,6 @@ urlpatterns = [
     path('task-delete/<int:pk>/', TaskDeleteView.as_view(), name='task-delete'),
     
     path('api/', include(router.urls)),
-    path('api/auth/token/', CustomAuthToken.as_view(), name='api_token_auth'),
+    path('api/auth/token/', CustomAuthToken.as_view(), name='auth_token'),
     
 ]
