@@ -40,6 +40,8 @@ INSTALLED_APPS = [
 ]
 
 CUSTOM_APPS = [
+    'rest_framework',
+    'rest_framework.authtoken',
     'base.apps.BaseConfig',
     'ckeditor',
 ]
