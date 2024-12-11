@@ -94,17 +94,17 @@ task-manager/
 │   ├── models.py
 │   ├── serializers.py
 │   ├── urls.py
-│   └── views.py
-└── templates/
-│   └── base/
+│   ├── views.py
+│   └── templates/
 │       ├── base.html
-│       ├── login.html
-│       ├── register.html
-│       ├── task_create.html
-│       ├── task_delete.html
-│       ├── task_detail.html
-│       ├── task_list.html
-│       └── task_update.html
+│       └── base/
+│           ├── login.html
+│           ├── register.html
+│           ├── task_create.html
+│           ├── task_delete.html
+│           ├── task_detail.html
+│           ├── task_list.html
+│           └── task_update.html
 └── django_task_management_system/
     ├── __init__.py
     ├── asgi.py
