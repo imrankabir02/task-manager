@@ -44,6 +44,7 @@ CUSTOM_APPS = [
     'rest_framework.authtoken',
     'base.apps.BaseConfig',
     'ckeditor',
+    'corsheaders',
 ]
 
 INSTALLED_APPS += CUSTOM_APPS
@@ -51,6 +52,7 @@ INSTALLED_APPS += CUSTOM_APPS
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -66,6 +68,20 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated',
     ],
 }
+
+CORS_ALLOWED_ORIGINS = [
+    "http://localhost:5173",  # Your React app URL
+]
+
+CORS_ALLOW_ALL_HEADERS = True
+CORS_ALLOW_METHODS = [
+    'DELETE',
+    'GET',
+    'OPTIONS',
+    'PATCH',
+    'POST',
+    'PUT',
+]
 
 ROOT_URLCONF = 'django_task_management_system.urls'
 
