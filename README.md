@@ -48,12 +48,12 @@ python3 manage.py runserver
 ````
 
 ## API Endpoints
-# Authentication
+### Authentication
 
 - Register: `POST /api/users/`
 - Get Token/Login: `POST /api/auth/token/`
 
-# Tasks
+### Tasks
 
 - List Tasks: `GET /api/tasks/`
 - Create Task: `POST /api/tasks/`
