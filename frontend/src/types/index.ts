@@ -1,3 +1,5 @@
+export type TaskStatus = 'todo' | 'started' | 'complete' | 'archived';
+
 export interface User {
     id: number;
     username: string;
@@ -10,12 +12,19 @@ export interface User {
     id: number;
     title: string;
     description: string;
-    status: 'todo' | 'started' | 'complete' | 'archived';
+    status: TaskStatus;
     due: string;
     created: string;
     updated: string;
     user: number;
   }
+  
+  export interface TaskFormData {
+    title: string;
+    description: string;
+    status: TaskStatus;
+    due: string;
+  }  
   
   export interface LoginCredentials {
     username: string;

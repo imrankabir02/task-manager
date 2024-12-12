@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { LoginCredentials, RegisterData, Task } from '../types';
+import { LoginCredentials, RegisterData, Task, TaskFormData } from '../types';
 
 const API_URL = 'http://localhost:8000/api';
 
@@ -30,7 +30,7 @@ export const auth = {
 };
 
 export const tasks = {
-  getAll: async () => {
+  getAll: async (): Promise<Task[]> => {
     const response = await api.get('/tasks/');
     return response.data;
   },
@@ -38,8 +38,8 @@ export const tasks = {
     const response = await api.get(`/tasks/${id}/`);
     return response.data;
   },
-  create: async (task: Partial<Task>) => {
-    const response = await api.post('/tasks/', task);
+  create: async (taskData: TaskFormData) => {
+    const response = await api.post('/tasks/', taskData);
     return response.data;
   },
   update: async (id: number, task: Partial<Task>) => {
