@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 import { tasks } from '../../api/api';
 import { Task } from '../../types';
+import { TiEdit } from "react-icons/ti";
 
 interface TaskItemProps {
   task: Task;
@@ -69,7 +70,7 @@ export const TaskItem = ({ task, onUpdate, onDelete }: TaskItemProps) => {
             onClick={() => navigate(`/tasks/${task.id}/edit`)}  // Changed from navigator to navigate
             className="inline-flex items-center p-2 text-indigo-600 border border-transparent rounded-md hover:bg-indigo-50"
           >
-            Edit
+            <TiEdit />
           </button>
           <button
             onClick={handleDelete}
