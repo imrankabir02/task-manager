@@ -10,11 +10,14 @@ from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
+from django.views.decorators.csrf import csrf_exempt
+from django.utils.decorators import method_decorator
 
 # Import Task model from the current directory
 from .models import Task
 
 # Custom login view
+@method_decorator(csrf_exempt, name='dispatch')
 class CustomLoginView(LoginView):
     template_name = 'base/login.html'  # Use custom login template
     fields = '__all__'
@@ -45,6 +48,7 @@ class CustomUserCreationForm(UserCreationForm):
         return user
 
 # Registration page view
+@method_decorator(csrf_exempt, name='dispatch')
 class RegisterPage(FormView):
     template_name = 'base/register.html'  # Use custom registration template
     form_class = CustomUserCreationForm  # Use custom user creation form

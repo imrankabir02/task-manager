@@ -26,7 +26,7 @@ SECRET_KEY ='django-insecure-6x1an@5109%)n*2pup$ll=oq@j665&ke2++iz)#%eidil!9t__'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv('DEBUG', 'False') == 'True'
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['web-production-0183.up.railway.app', '.vercel.app']
 
 
 # Application definition
@@ -75,7 +75,18 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
 ]
 
-# CORS_ALLOW_CREDENTIALS = True
+
+
+CSRF_TRUSTED_ORIGINS = [
+    "https://task-manager-yiry.vercel.app",
+    "https://web-production-0183.up.railway.app"
+]
+
+CORS_ALLOW_CREDENTIALS = True
+CSRF_COOKIE_SECURE = True
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SAMESITE = 'None'
+SESSION_COOKIE_SAMESITE = 'None'
 
 CORS_ALLOW_ALL_HEADERS = True
 

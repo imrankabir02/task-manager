@@ -1,10 +1,11 @@
 import axios from 'axios';
 import { LoginCredentials, RegisterData, Task, TaskFormData } from '../types';
 
-const API_URL = 'http://localhost:8000/api';
+const API_URL = 'https://web-production-0183.up.railway.app/api' || 'http://localhost:8000/api';
 
 const api = axios.create({
   baseURL: API_URL,
+  withCredentials: true,
   headers: {
     'Content-Type': 'application/json',
   },
