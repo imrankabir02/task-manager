@@ -5,13 +5,22 @@ import { Register } from './components/Auth/Register';
 import { TaskList } from './components/Tasks/TaskList';
 import { TaskForm } from './components/Tasks/TaskForm';
 import { ProtectedRoute } from './components/Auth/ProtectedRoute';
+import { AuthGuard } from './components/Auth/AuthGuard';
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/login" element={<Login />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/login" element={
+          <AuthGuard>
+            <Login />
+          </AuthGuard>
+        } />
+        <Route path="/register" element={
+          <AuthGuard>
+            <Register />
+          </AuthGuard>
+        } />
 
         <Route path="/tasks" element={
           <ProtectedRoute>
@@ -20,7 +29,7 @@ function App() {
             </Layout>
           </ProtectedRoute>
         } />
-        
+
         <Route path="/tasks/new" element={
           <ProtectedRoute>
             <Layout>
