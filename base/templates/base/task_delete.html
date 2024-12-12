@@ -12,7 +12,7 @@ TMS - Delete Task
 
 <!-- Form for confirming task deletion -->
 <form action="" method="post">
-    {% csrf_token %}
+    {% comment %} {% csrf_token %} {% endcomment %}
     {{ form.as_p }}
     <!-- Display task details -->
     <h3>Title</h3>

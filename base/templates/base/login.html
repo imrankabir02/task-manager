@@ -10,7 +10,7 @@ Login <!-- Sets the title to "Login" -->
 
 <h1 class="h2">Login</h1>
 <form action="" method="post">
-    {% csrf_token %} <!-- CSRF token for security -->
+    {% comment %} {% csrf_token %} <!-- CSRF token for security --> {% endcomment %}
     {{ form.as_p }} <!-- Django form as paragraph -->
     <input type="submit" value="Login"> <!-- Submit button for the form -->
     <p style="color: #333; font-size: 1.2rem; text-align: center; margin-top: 20px;">Don't have an account? <a href="{% url 'register' %}">Register</a></p>

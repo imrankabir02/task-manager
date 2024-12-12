@@ -17,7 +17,7 @@ Update
 
 <!-- Form for updating task -->
 <form action="" method="post">
-    {% csrf_token %}
+    {% comment %} {% csrf_token %} {% endcomment %}
     {{ form.media }}
     {{ form.as_p }}
     <input type="submit" value="Update Task">  <!-- Submit button -->
