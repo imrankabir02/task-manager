@@ -48,7 +48,7 @@ A full-stack task management application built with Django REST Framework and Re
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/task-manager.git
+git clone https://github.com/imrankabir02/task-manager.git
 cd task-manager
 ```
 
