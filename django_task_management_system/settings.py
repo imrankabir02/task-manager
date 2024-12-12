@@ -71,14 +71,14 @@ REST_FRAMEWORK = {
 }
 
 CORS_ALLOWED_ORIGINS = [
-    "https://task-manager-yiry.vercel.app",
+    "https://task-manager-live.vercel.app",
     "http://localhost:5173",
 ]
 
 
 
 CSRF_TRUSTED_ORIGINS = [
-    "https://task-manager-yiry.vercel.app",
+    "https://task-manager-live.vercel.app",
     "https://web-production-0183.up.railway.app"
 ]
 
