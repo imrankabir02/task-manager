@@ -1,24 +1,52 @@
-# Django Task Management System API
+# Task Management System Documentation
 
-A robust Task Management System built with Django REST Framework, featuring user authentication, task CRUD operations, and status management.
+A full-stack task management application built with Django REST Framework and React with TypeScript.
+
+## Live Demo
+- Frontend: [https://task-manager-live.vercel.app](https://task-manager-live.vercel.app)
+- Backend: [https://web-production-0183.up.railway.app](https://web-production-0183.up.railway.app)
+
+## Table of Contents
+1. [Features](#features)
+2. [Tech Stack](#tech-stack)
+3. [Project Structure](#project-structure)
+4. [API Documentation](#api-documentation)
+5. [Frontend Components](#frontend-components)
+6. [Installation](#installation)
+7. [Deployment](#deployment)
+8. [Security](#security)
 
 ## Features
+- User Authentication (Login/Register)
+- Task Management (CRUD operations)
+- Task Status Management (Todo, Started, Complete, Archived)
+- Search & Filter Tasks
+- Responsive Design
+- Rich Text Editor for Task Descriptions
+- Due Date Management
+- Token-based Authentication
 
-- User Authentication with Token-based system
-- Create, Read, Update, and Delete tasks
-- Task status management (Todo, Started, Complete, Archived)
-- Rich text descriptions using CKEditor
-- Organized task view with search functionality
+## Tech Stack
 
-## Technologies
-
-- Python 3.12+
+### Backend
 - Django 5.1.4
 - Django REST Framework
-- CKEditor
-- PostgreSQL/SQLite3
+- PostgreSQL (Railway)
+- Django CORS Headers
+- Django CKEditor
+- Python-dotenv
+
+### Frontend
+- React 18
+- TypeScript
+- Vite
+- Tailwind CSS
+- Axios
+- React Router v6
 
 ## Installation
+
+### Backend Setup
 
 1. Clone the repository
 ```bash
@@ -45,6 +73,15 @@ python3 manage.py migrate
 5. Run the development server
 ````bash
 python3 manage.py runserver
+````
+
+### Frontend Setup
+
+# Navigate to frontend directory
+````bash
+cd frontend
+npm install
+npm run dev
 ````
 
 ## API Endpoints
@@ -105,11 +142,35 @@ task-manager/
 │           ├── task_detail.html
 │           ├── task_list.html
 │           └── task_update.html
-└── django_task_management_system/
-    ├── __init__.py
-    ├── asgi.py
-    ├── settings.py
-    ├── urls.py
-    └── wsgi.py
+├── django_task_management_system/
+│   ├── __init__.py
+│   ├── asgi.py
+│   ├── settings.py
+│   ├── urls.py
+│   └── wsgi.py
+└── frontend/
+    ├── src/
+    │   ├── api/
+    │   │   └── api.ts     # API service functions
+    │   ├── components/
+    │   │   ├── Auth/
+    │   │   │   ├── Login.tsx
+    │   │   │   └── Register.tsx
+    │   │   ├── Layout/
+    │   │   │   ├── Layout.tsx
+    │   │   │   ├── Navbar.tsx
+    │   │   │   └── Footer.tsx
+    │   │   └── Tasks/
+    │   │       ├── TaskForm.tsx
+    │   │       ├── TaskList.tsx
+    │   │       ├── TaskItem.tsx
+    │   │       └── TaskUpdate.tsx
+    │   ├── hooks/
+    │   │   └── useAuth.ts
+    │   ├── types/
+    │   │   └── index.ts
+    │   ├── App.tsx
+    │   └── main.tsx
+    └── package.json
 
 ```
