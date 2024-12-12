@@ -12,7 +12,7 @@ export const Layout = ({ children }: LayoutProps) => {
             <main className="py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
                 {children}
             </main>
-            <Footer/>
+            {/* <Footer/> */}
         </div>
     );
 };
