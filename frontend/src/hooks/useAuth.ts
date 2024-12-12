@@ -2,12 +2,6 @@ import { useCallback, useState } from 'react';
 import { auth } from '../api/api';
 import { LoginCredentials, RegisterData } from '../types';
 
-type AuthResponse = {
-  token: string;
-  user_id: number;
-  email: string;
-}
-
 export const useAuth = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
