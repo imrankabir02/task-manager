@@ -70,7 +70,7 @@ export const TaskItem = ({ task, onUpdate, onDelete }: TaskItemProps) => {
             onClick={() => navigate(`/tasks/${task.id}/edit`)}  // Changed from navigator to navigate
             className="inline-flex items-center p-2 text-indigo-600 border border-transparent rounded-md hover:bg-indigo-50"
           >
-            <TiEdit size={30}/>
+            <TiEdit size={25}/>
           </button>
           <button
             onClick={handleDelete}
