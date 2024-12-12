@@ -6,6 +6,7 @@ import { TaskList } from './components/Tasks/TaskList';
 import { TaskForm } from './components/Tasks/TaskForm';
 import { ProtectedRoute } from './components/Auth/ProtectedRoute';
 import { AuthGuard } from './components/Auth/AuthGuard';
+import { TaskUpdate } from './components/Tasks/TaskUpdate';
 
 function App() {
   return (
@@ -37,6 +38,17 @@ function App() {
             </Layout>
           </ProtectedRoute>
         } />
+
+        <Route
+          path="/tasks/:id/edit"
+          element={
+            <ProtectedRoute>
+              <Layout>
+                <TaskUpdate />
+              </Layout>
+            </ProtectedRoute>
+          }
+        />
 
         <Route path="/" element={
           <ProtectedRoute>

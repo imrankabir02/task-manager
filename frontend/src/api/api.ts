@@ -34,7 +34,7 @@ export const tasks = {
     const response = await api.get('/tasks/');
     return response.data;
   },
-  getById: async (id: number) => {
+  getById: async (id: number): Promise<Task> => {
     const response = await api.get(`/tasks/${id}/`);
     return response.data;
   },
@@ -42,7 +42,7 @@ export const tasks = {
     const response = await api.post('/tasks/', taskData);
     return response.data;
   },
-  update: async (id: number, task: Partial<Task>) => {
+  update: async (id: number, task: Partial<Task>): Promise<Task> => {
     const response = await api.put(`/tasks/${id}/`, task);
     return response.data;
   },
