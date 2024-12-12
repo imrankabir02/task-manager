@@ -9,12 +9,10 @@ A full-stack task management application built with Django REST Framework and Re
 ## Table of Contents
 1. [Features](#features)
 2. [Tech Stack](#tech-stack)
-3. [Project Structure](#project-structure)
-4. [API Documentation](#api-documentation)
-5. [Frontend Components](#frontend-components)
-6. [Installation](#installation)
-7. [Deployment](#deployment)
-8. [Security](#security)
+3. [Installation](#installation)
+4. [API Endpoints](#api-endpoints)
+5. [Security](#security)
+6. [Project Structure](#project-structure)
 
 ## Features
 - User Authentication (Login/Register)
