@@ -1,0 +1,1 @@
+web: gunicorn django_task_management_system.wsgi
